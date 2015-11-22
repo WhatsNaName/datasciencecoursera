@@ -82,7 +82,7 @@ finaldata <- traintestdata[,grep("mean|std|activity", colnames(traintestdata), v
 activityavg <- ddply(finaldata, .(activity), numcolwise(mean))
 
 #writes output to a text file with row.name equal to FALSE
-write.table(activityavg, "activityavg.txt",  col.names = TRUE, row.name=FALSE)
+write.table(activityavg, "activityavg.txt",  row.name=FALSE)
 
 message("processing complete")
 
